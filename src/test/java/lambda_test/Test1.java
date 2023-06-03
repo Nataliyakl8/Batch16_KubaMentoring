@@ -76,20 +76,21 @@ public class Test1 {
        Assert.assertEquals(actual,expected);
 
 
-
-
-
-
-
-
-
-
-
-
-
    }
 
+    @Test()
+    public void test2(){
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options= new ChromeOptions();
+        options.addArguments("--remote -allow-origins=*");
+
+
+        WebDriver driver= new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.lambdatest.com/selenium-playground");
 
 
 
-}
+
+}}
