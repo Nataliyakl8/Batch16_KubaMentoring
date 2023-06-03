@@ -31,7 +31,7 @@ public class Alerts {
 
 
 
-        WebElement js= driver.findElement(By.xpath("//p[contains(text(),'JS Alert')]"));
+        WebElement js= driver.findElement(By.xpath("//p[contains(text(),'JS Alert')]//button"));
         js.click();
 
         Thread.sleep(2000);
@@ -44,7 +44,7 @@ public class Alerts {
 
         alert.accept();
 
-        WebElement confirm = driver.findElement(By.xpath("//p[contains(text(),'Confirm box:')]"));
+        WebElement confirm = driver.findElement(By.xpath("//p[contains(text(),'Confirm box:')]//button"));
 
         confirm.click();
 
@@ -57,7 +57,7 @@ public class Alerts {
         WebElement cancelMsg= driver.findElement(By.cssSelector("#confirm-demo"));
         System.out.println(cancelMsg.getText().trim());
 
-        WebElement prompt=driver.findElement(By.xpath("//p[contains(text(),'Prompt box:')]"));
+        WebElement prompt=driver.findElement(By.xpath("//p[contains(text(),'Prompt box:')]//button"));
         prompt.click();
 
         alert.sendKeys("Nataliya");
